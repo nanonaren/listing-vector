@@ -23,6 +23,7 @@ import qualified Data.Vector.Unboxed as U
 
 instance Listing (V.Vector a) where
     type Elem (V.Vector a) = a
+    type Length (V.Vector a) = Int
     type Index (V.Vector a) = Int
     type IndexElem (V.Vector a) = a
     toList = V.toList
@@ -38,6 +39,7 @@ instance Listing (V.Vector a) where
 
 instance U.Unbox a => Listing (U.Vector a) where
     type Elem (U.Vector a) = a
+    type Length (U.Vector a) = Int
     type Index (U.Vector a) = Int
     type IndexElem (U.Vector a) = a
     toList = U.toList
