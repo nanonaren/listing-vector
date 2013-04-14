@@ -31,6 +31,7 @@ instance Listing (V.Vector a) where
     (!) = (V.!)
     singleton = V.singleton
     size = V.length
+    empty = V.empty
     null = V.null
     head = V.head
     tail = V.tail
@@ -45,6 +46,7 @@ instance U.Unbox a => Listing (U.Vector a) where
     (!) = (U.!)
     singleton = U.singleton
     size = U.length
+    empty = U.empty
     null = U.null
     head = U.head
     tail = U.tail
